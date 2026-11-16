@@ -262,7 +262,7 @@ body{color-scheme:light!important;background:#f4f7fb!important;color:#17243b!imp
 </style></head>
 <body class="antialiased">
 <!-- Top Sticky Navigation & Action Bar -->
-<nav class="reader-topbar no-print"><div class="reader-topbar-inner"><button aria-controls="readerSidebar" aria-expanded="false" aria-label="فتح قائمة المحتويات" class="reader-icon-btn" id="menuToggle">☰</button><select id="mobileSectionSelect" class="mobile-section-select" aria-label="اختر قسمًا / Choose section"><option value="">☰ الأقسام / Sections</option></select><a class="hub-back" href="../">⌂ Home / الرئيسية</a><div class="reader-brand"><strong>Tableau Study Guide</strong><span>Data Analysis Diploma · دليل تفاعلي</span></div><div class="reader-tools"><button aria-label="بحث" class="reader-icon-btn" id="searchToggle">⌕</button><button class="reader-icon-btn" id="settingsToggle" aria-label="الإعدادات / Settings" aria-expanded="false" aria-controls="readerSettings" title="الإعدادات">⚙</button></div><button aria-label="Switch language" class="hub-lang" id="hubLangToggle" type="button">English</button></div><div class="reader-settings" id="readerSettings" role="group" aria-label="إعدادات القراءة"><div class="settings-heading">⚙ إعدادات القراءة <span>Reading settings</span></div><div class="settings-subtitle">حجم الخط / Text size</div><div aria-label="التحكم في حجم النص" class="reader-size-controls"><button aria-label="تصغير الخط" id="fontDecrease">A−</button><span id="fontValue">90%</span><button aria-label="تكبير الخط" id="fontIncrease">A+</button><button aria-label="إعادة الحجم الافتراضي" id="fontReset">إعادة ضبط / Reset</button></div><div class="settings-note">☀ الوضع الفاتح مفعّل دائمًا</div></div><div class="reader-search" id="readerSearch"><input aria-label="البحث في الدليل" autocomplete="off" id="readerSearchInput" placeholder="ابحث في الفصول والشرح... Search Tableau" type="search"/><button aria-label="مسح البحث" id="searchClear">✕</button><div aria-live="polite" id="searchResults" role="status"></div></div></nav><div class="reader-backdrop no-print" id="readerBackdrop"></div><aside class="reader-sidebar no-print" id="readerSidebar"><div class="sidebar-header"><strong>📚 المحتويات</strong><button aria-label="إغلاق القائمة" id="sidebarClose">✕</button></div><div class="sidebar-search-hint">اضغط على أي فصل للانتقال إليه</div><div class="sidebar-links" id="sidebarLinks"></div><div class="sidebar-footer">Light mode دائمًا ☀️</div></aside>
+<nav class="reader-topbar no-print"><div class="reader-topbar-inner"><button aria-controls="readerSidebar" aria-expanded="false" aria-label="فتح قائمة المحتويات" class="reader-icon-btn" id="menuToggle">☰</button><select id="mobileSectionSelect" class="mobile-section-select" aria-label="اختر قسمًا / Choose section"><option value="">☰ الأقسام / Sections</option></select><a class="hub-back" href="../">⌂ Home / الرئيسية</a><div class="reader-brand"><strong>Tableau Study Guide</strong><span>Data Analysis Diploma · دليل تفاعلي</span></div><div class="reader-tools"><button aria-label="بحث" class="reader-icon-btn" id="searchToggle">⌕</button><button class="reader-icon-btn" id="settingsToggle" aria-label="الإعدادات / Settings" aria-expanded="false" aria-controls="readerSettings" title="الإعدادات">⚙</button></div><button aria-label="Switch language" class="hub-lang" id="hubLangToggle" type="button">English</button></div><div class="reader-settings" id="readerSettings" role="group" aria-label="إعدادات القراءة"><div class="settings-heading">⚙ إعدادات القراءة <span>Reading settings</span></div><div class="settings-subtitle">حجم الخط / Text size</div><div aria-label="التحكم في حجم النص" class="reader-size-controls"><button aria-label="تصغير الخط" id="fontDecrease">A−</button><span id="fontValue">90%</span><button aria-label="تكبير الخط" id="fontIncrease">A+</button><button aria-label="إعادة الحجم الافتراضي" id="fontReset">إعادة ضبط / Reset</button></div><div class="settings-note">☀ الوضع الفاتح مفعّل دائمًا</div></div><div class="reader-search" id="readerSearch"><input aria-label="البحث في الدليل" autocomplete="off" id="readerSearchInput" placeholder="ابحث في الفصول والشرح... Search Tableau" type="search"/><button aria-label="مسح البحث" id="searchClear">✕</button><div aria-live="polite" id="searchResults" role="status"></div></div></nav><div class="reader-backdrop no-print" id="readerBackdrop"></div><aside class="reader-sidebar no-print" id="readerSidebar"><div class="sidebar-header"><strong>📚 المحتويات</strong><button aria-label="إغلاق القائمة" id="sidebarClose">✕</button></div><div class="sidebar-search-hint">اختار عنوان الدرس من القائمة</div><div class="sidebar-filter-box"><input id="sidebarFilter" type="search" autocomplete="off" placeholder="ابحث عن درس... / Search topics" aria-label="بحث في عناوين الدروس"><button id="sidebarFilterClear" type="button" aria-label="مسح البحث">×</button></div><p id="sidebarFilterEmpty" class="sidebar-empty" hidden>لا توجد نتائج / No matching topics</p><div class="sidebar-links" id="sidebarLinks"></div><div class="sidebar-footer">Light mode دائمًا ☀️</div></aside>
 <!-- Main Container -->
 <main class="max-w-6xl mx-auto px-4 py-7 space-y-6 reader-main" id="readerMain">
 <!-- Hero Banner -->
@@ -1783,6 +1783,171 @@ document.addEventListener('DOMContentLoaded',()=>{
    for(const o of opts){if(!o.parentElement || o.parentElement===sel)frag.append(o)}
    sel.append(frag);
  }
+});
+</script>
+
+<style id="nav-fix-v3">
+/* The guide's illustrations and lesson markup are not modified. */
+.reader-topbar{z-index:250!important;isolation:isolate;overflow:visible!important}
+.reader-settings{position:fixed!important;z-index:9999!important;top:70px!important;right:12px!important;left:auto!important;max-height:calc(100dvh - 86px);overflow-y:auto;box-shadow:0 18px 60px #17315350!important}
+.reader-sidebar{z-index:200!important}
+.reader-backdrop{z-index:190!important}
+.sidebar-filter-box{display:flex;gap:5px;margin:4px 10px 12px;padding:5px;background:#f4f8fd;border:1px solid #d5e3f2;border-radius:10px}
+.sidebar-filter-box input{width:100%;min-width:0;border:0;background:transparent;outline:none;padding:8px;color:#16355b;font-size:13px;direction:auto}
+.sidebar-filter-box button{border:0;background:#e3ecf7;color:#274e76;border-radius:7px;min-width:30px;cursor:pointer}
+.sidebar-empty{padding:12px;color:#64748b;font-size:13px}
+.reader-sidebar details.nav-group>summary{user-select:none;cursor:pointer}
+.reader-sidebar details.nav-group>summary:focus-visible{outline:2px solid #2475b8;outline-offset:-2px}
+@media(min-width:1200px){
+ body.sidebar-collapsed .reader-sidebar{transform:translateX(-105%)!important;visibility:hidden}
+ body.sidebar-collapsed .reader-main{margin-left:auto!important}
+ .reader-sidebar .sidebar-header button{display:inline-flex!important}
+ .reader-topbar #menuToggle{display:inline-flex!important}
+}
+@media(max-width:1199px){.reader-settings{top:65px!important}}
+</style>
+<script id="nav-fix-v3-script">
+document.addEventListener('DOMContentLoaded',()=>{
+ const side=document.getElementById('readerSidebar'),toggle=document.getElementById('menuToggle'),close=document.getElementById('sidebarClose');
+ const settings=document.getElementById('readerSettings'),settingsBtn=document.getElementById('settingsToggle');
+ const isDesktop=()=>matchMedia('(min-width:1200px)').matches;
+ const setCollapsed=(v)=>{document.body.classList.toggle('sidebar-collapsed',v);toggle?.setAttribute('aria-expanded',String(!v));try{localStorage.setItem('tableauSidebarCollapsed',v?'1':'0')}catch(e){}};
+ try{if(isDesktop()&&localStorage.getItem('tableauSidebarCollapsed')==='1')setCollapsed(true)}catch(e){}
+ // Desktop: capture the menu button before the original mobile drawer listener.
+ toggle?.addEventListener('click',e=>{if(!isDesktop())return;e.stopImmediatePropagation();setCollapsed(!document.body.classList.contains('sidebar-collapsed'))},true);
+ close?.addEventListener('click',e=>{if(!isDesktop())return;e.stopImmediatePropagation();setCollapsed(true)},true);
+ window.addEventListener('resize',()=>{if(isDesktop()){side?.classList.remove('open');document.getElementById('readerBackdrop')?.classList.remove('open')}});
+ // Keep settings over all overlays; prevent clipping by the sticky topbar.
+ if(settings&&settings.parentElement!==document.body)document.body.appendChild(settings);
+ const positionSettings=()=>{if(!settingsBtn||!settings)return;const r=settingsBtn.getBoundingClientRect();settings.style.top=Math.min(r.bottom+8,innerHeight-70)+'px';settings.style.right=Math.max(8,innerWidth-r.right)+'px'};
+ settingsBtn?.addEventListener('click',positionSettings,true);
+ window.addEventListener('resize',positionSettings);
+ // Sidebar search only filters navigation entries; it never hides lesson content or illustrations.
+ const filter=document.getElementById('sidebarFilter'),clear=document.getElementById('sidebarFilterClear'),empty=document.getElementById('sidebarFilterEmpty');
+ const nav=document.getElementById('sidebarLinks');
+ const norm=s=>(s||'').toLocaleLowerCase().normalize('NFKC').replace(/[\u064b-\u065f]/g,'').trim();
+ const run=()=>{if(!nav||!filter)return;const q=norm(filter.value);let count=0;
+ nav.querySelectorAll('details.nav-group').forEach(group=>{let hits=0;group.querySelectorAll('a').forEach(a=>{const yes=!q||norm(a.textContent).includes(q);a.hidden=!yes;if(yes){hits++;count++}});group.hidden=!!q&&!hits;if(q&&hits)group.open=true});
+ nav.querySelectorAll(':scope > a').forEach(a=>{const yes=!q||norm(a.textContent).includes(q);a.hidden=!yes;if(yes)count++});
+ if(empty)empty.hidden=!!count||!q;
+ };
+ filter?.addEventListener('input',run);clear?.addEventListener('click',()=>{filter.value='';run();filter.focus()});
+ // Group titles are expand/collapse controls, never links that jump to a lesson.
+ nav?.querySelectorAll('details.nav-group > summary').forEach(summary=>{summary.setAttribute('role','button');summary.setAttribute('aria-label','فتح أو إغلاق مجموعة '+summary.textContent.trim())});
+});
+</script>
+
+<style id="tableau-gallery-styles">
+/* Only actual Tableau screenshots are interactive; diagrams remain unchanged. */
+figure:has(img[alt*="Actual Tableau"]) img,figure:has(img[alt*="Actual Tableau"]) img{cursor:zoom-in;transition:filter .15s,transform .15s}
+figure:has(img[alt*="Actual Tableau"]) img:hover{filter:brightness(.96)}
+.tableau-real-image{cursor:zoom-in}
+.tableau-real-image:focus-visible{outline:3px solid #2563eb;outline-offset:3px}
+#tableau-gallery[hidden]{display:none!important}
+#tableau-gallery{position:fixed;inset:0;z-index:2147483647;background:rgba(9,20,38,.96);color:#fff;display:flex;flex-direction:column;padding:12px;box-sizing:border-box;direction:ltr}
+#tableau-gallery *{box-sizing:border-box}
+#tableau-gallery .tg-head{display:flex;align-items:center;gap:10px;justify-content:space-between;min-height:48px}
+#tableau-gallery .tg-counter{font:600 13px system-ui,sans-serif;color:#cbd5e1}
+#tableau-gallery .tg-close,#tableau-gallery .tg-arrow{appearance:none;border:1px solid rgba(255,255,255,.25);background:#26354d;color:#fff;border-radius:12px;cursor:pointer;min-width:44px;min-height:44px;font-size:24px}
+#tableau-gallery .tg-close:hover,#tableau-gallery .tg-arrow:hover{background:#3c516f}
+#tableau-gallery .tg-view{display:flex;align-items:center;justify-content:center;flex:1;min-height:0;gap:8px}
+#tableau-gallery .tg-image{display:block;max-width:calc(100% - 106px);max-height:100%;width:auto;height:auto;object-fit:contain;box-shadow:0 4px 30px #0008;border-radius:5px}
+#tableau-gallery .tg-arrow{flex-shrink:0}
+#tableau-gallery .tg-caption{text-align:center;padding:12px 4px 8px;direction:auto;font:500 15px/1.65 system-ui,sans-serif;max-height:24vh;overflow:auto}
+#tableau-gallery .tg-hint{text-align:center;color:#b8c8dc;font:12px system-ui,sans-serif;padding-bottom:5px}
+.tableau-tag{display:inline;border-radius:5px;padding:1px 5px;font-weight:750;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.tableau-tag.term{background:#dbeafe;color:#1d4ed8}
+.tableau-tag.important{background:#fef3c7;color:#92400e}
+.tableau-tag.result{background:#dcfce7;color:#166534}
+@media(max-width:600px){#tableau-gallery{padding:8px}#tableau-gallery .tg-image{max-width:calc(100% - 84px)}#tableau-gallery .tg-arrow{min-width:36px;width:36px;font-size:19px}#tableau-gallery .tg-caption{font-size:13px}}
+</style>
+<div id="tableau-gallery" role="dialog" aria-modal="true" aria-label="Tableau screenshot gallery" hidden>
+ <div class="tg-head"><span class="tg-counter" id="tg-counter"></span><button class="tg-close" id="tg-close" type="button" aria-label="Close gallery">×</button></div>
+ <div class="tg-view"><button class="tg-arrow" id="tg-prev" type="button" aria-label="Previous image">‹</button><img class="tg-image" id="tg-image" alt=""><button class="tg-arrow" id="tg-next" type="button" aria-label="Next image">›</button></div>
+ <div class="tg-caption" id="tg-caption"></div><div class="tg-hint">← → للتنقل · Esc للإغلاق · Tap image to zoom</div>
+</div>
+<script id="tableau-gallery-script">
+document.addEventListener('DOMContentLoaded',()=>{
+ const real=[...document.querySelectorAll('img')].filter(img=>/actual tableau/i.test(img.alt||''));
+ const dialog=document.getElementById('tableau-gallery');
+ const large=document.getElementById('tg-image'),cap=document.getElementById('tg-caption'),counter=document.getElementById('tg-counter');
+ const close=document.getElementById('tg-close');let current=0,previousFocus=null;
+ function captionFor(img){const figure=img.closest('figure');const fc=figure?.querySelector('figcaption');return (fc?.innerText||img.alt||'Tableau screenshot').trim()}
+ function show(n){current=(n+real.length)%real.length;const img=real[current];large.src=img.currentSrc||img.src;large.alt=img.alt||'Tableau screenshot';cap.textContent=captionFor(img);counter.textContent=`${current+1} / ${real.length}`;}
+ function open(n){previousFocus=document.activeElement;show(n);dialog.hidden=false;document.body.style.overflow='hidden';close.focus()}
+ function hide(){dialog.hidden=true;large.removeAttribute('src');document.body.style.overflow='';previousFocus?.focus?.()}
+ real.forEach((img,i)=>{img.classList.add('tableau-real-image');img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label','تكبير الصورة: '+captionFor(img));img.addEventListener('click',()=>open(i));img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(i)}})});
+ close.addEventListener('click',hide);
+ document.getElementById('tg-prev').addEventListener('click',()=>show(current-1));
+ document.getElementById('tg-next').addEventListener('click',()=>show(current+1));
+ dialog.addEventListener('click',e=>{if(e.target===dialog)hide()});
+ document.addEventListener('keydown',e=>{if(dialog.hidden)return;if(e.key==='Escape')hide();if(e.key==='ArrowLeft')show(current-1);if(e.key==='ArrowRight')show(current+1);if(e.key==='Tab'){e.preventDefault();close.focus()}});
+ let sx=0;large.addEventListener('touchstart',e=>{sx=e.changedTouches[0]?.screenX||0},{passive:true});large.addEventListener('touchend',e=>{const dx=(e.changedTouches[0]?.screenX||0)-sx;if(Math.abs(dx)>60)show(current+(dx<0?1:-1))},{passive:true});
+ // Highlight terminology, key concepts and results without replacing existing illustrations.
+ const terms=/\b(?:Tableau Public|Calculated Fields?|Dimensions?|Measures?|Discrete|Continuous|Marks Card|Show Me|Filters?|Parameters?|Dashboard|Worksheet|Relationships?|Joins?|Unions?|LOD|Table Calculations?|Scatter Plot|Line Chart|Bar Chart|Histogram|Heat Map|Tree ?Map|Color|Rows|Columns)\b/gi;
+ const importance=/(?:مهم جدًا|مهم جدا|ملاحظة مهمة|احذر|تنبيه|Important|Warning|نصيحة مهمة)/gi;
+ const results=/(?:النتيجة|الاستنتاج|الخلاصة|Result|Output|Insight)/gi;
+ const container=document.querySelector('main')||document.body;
+ const nodes=[];const walker=document.createTreeWalker(container,NodeFilter.SHOW_TEXT);
+ while(walker.nextNode()){const node=walker.currentNode;if(!node.parentElement||node.parentElement.closest('script,style,pre,code,svg,button,a,.tableau-tag,figcaption'))continue;if(node.textContent.length>900||node.textContent.length<4)continue;if(!node.parentElement.closest('p,li,td,h2,h3,h4,strong'))continue;nodes.push(node)}
+ const combined=new RegExp('('+terms.source+')|('+importance.source+')|('+results.source+')','gi');
+ for(const node of nodes){const text=node.textContent;combined.lastIndex=0;if(!combined.test(text))continue;combined.lastIndex=0;const fragment=document.createDocumentFragment();let last=0,m;
+ while((m=combined.exec(text))!==null){if(m.index>last)fragment.append(document.createTextNode(text.slice(last,m.index)));const span=document.createElement('span');span.className='tableau-tag '+(m[1]?'term':m[2]?'important':'result');span.textContent=m[0];fragment.append(span);last=m.index+m[0].length}
+ if(last<text.length)fragment.append(document.createTextNode(text.slice(last)));node.replaceWith(fragment)}
+});
+</script>
+
+<style id="gallery-zoom-v3">
+#tableau-gallery .tg-head{gap:8px;flex-wrap:wrap}
+#tableau-gallery .tg-zoomtools{display:flex;align-items:center;gap:6px;margin-inline-start:auto}
+#tableau-gallery .tg-zoomtools button{border:1px solid #65758d;border-radius:9px;background:#26354d;color:white;min-width:40px;height:40px;font-size:19px;cursor:pointer}
+#tableau-gallery .tg-zoomtools button:focus-visible{outline:3px solid #8bc1ff}
+#tableau-gallery .tg-zoomtools output{font:600 12px system-ui;color:#fff;min-width:40px;text-align:center}
+#tableau-gallery .tg-view{overflow:hidden;touch-action:none;position:relative}
+#tableau-gallery .tg-image{transform-origin:center;will-change:transform;cursor:zoom-in;touch-action:none;user-select:none;-webkit-user-drag:none}
+#tableau-gallery .tg-image.is-zoomed{cursor:grab}
+#tableau-gallery .tg-image.is-panning{cursor:grabbing}
+.sidebar-links details.nav-group>summary{display:flex;align-items:center;gap:8px;list-style:none}
+.sidebar-links details.nav-group>summary::before{display:none}
+.sidebar-links .nav-group-title{flex:1;cursor:pointer;text-decoration:none;color:#173c68;font-weight:800}
+.sidebar-links .nav-group-title:hover{text-decoration:underline}
+.sidebar-links .nav-group-arrow{border:1px solid #c8d9eb;background:#fff;color:#1e5285;border-radius:8px;width:34px;height:34px;cursor:pointer;display:grid;place-items:center;font-size:18px}
+.sidebar-links details.nav-group[open] .nav-group-arrow{transform:rotate(90deg)}
+</style>
+<script id="gallery-zoom-v3-script">
+document.addEventListener('DOMContentLoaded',()=>{
+ // Clicking a group title navigates to its first lesson. Only its arrow toggles expansion.
+ document.querySelectorAll('#sidebarLinks details.nav-group').forEach(group=>{
+   const summary=group.querySelector(':scope > summary');const first=group.querySelector('a[href^="#"]');if(!summary||!first)return;
+   const title=document.createElement('a');title.className='nav-group-title';title.href=first.getAttribute('href');title.textContent=summary.textContent.trim();
+   const arrow=document.createElement('button');arrow.type='button';arrow.className='nav-group-arrow';arrow.setAttribute('aria-label','فتح أو إغلاق دروس المجموعة');arrow.setAttribute('aria-expanded',String(group.open));arrow.textContent='›';
+   summary.replaceChildren(title,arrow);
+   summary.addEventListener('click',e=>{e.preventDefault();if(e.target===arrow){group.open=!group.open;arrow.setAttribute('aria-expanded',String(group.open))}else{group.open=true;arrow.setAttribute('aria-expanded','true');document.getElementById(first.hash.slice(1))?.scrollIntoView({behavior:'smooth',block:'start'});history.replaceState(null,'',first.hash);document.getElementById('readerSidebar')?.classList.remove('open');document.getElementById('readerBackdrop')?.classList.remove('open');document.getElementById('menuToggle')?.setAttribute('aria-expanded','false')}});
+   title.addEventListener('keydown',e=>{if(e.key==='Enter'){group.open=true}});
+ });
+ const dlg=document.getElementById('tableau-gallery'),img=document.getElementById('tg-image'),head=dlg?.querySelector('.tg-head'),view=dlg?.querySelector('.tg-view');if(!dlg||!img||!head||!view)return;
+ const tools=document.createElement('div');tools.className='tg-zoomtools';tools.innerHTML='<button type="button" id="tg-zoom-out" aria-label="Zoom out">−</button><output id="tg-zoom-level">100%</output><button type="button" id="tg-zoom-in" aria-label="Zoom in">+</button><button type="button" id="tg-zoom-reset" aria-label="Reset zoom">⤢</button>';head.insertBefore(tools,document.getElementById('tg-close'));
+ let scale=1,x=0,y=0,drag=null,pinch=null;
+ const output=document.getElementById('tg-zoom-level');
+ function apply(){scale=Math.min(5,Math.max(1,scale));if(scale===1){x=0;y=0}img.style.transform=`translate(${x}px, ${y}px) scale(${scale})`;img.classList.toggle('is-zoomed',scale>1);output.textContent=Math.round(scale*100)+'%'}
+ function reset(){scale=1;x=0;y=0;apply()}
+ function zoom(factor){scale*=factor;apply()}
+ document.getElementById('tg-zoom-in').addEventListener('click',()=>zoom(1.4));
+ document.getElementById('tg-zoom-out').addEventListener('click',()=>zoom(1/1.4));
+ document.getElementById('tg-zoom-reset').addEventListener('click',reset);
+ img.addEventListener('dblclick',e=>{e.preventDefault();scale=scale>1?1:2;apply()});
+ view.addEventListener('wheel',e=>{if(dlg.hidden)return;e.preventDefault();zoom(e.deltaY<0?1.15:1/1.15)},{passive:false});
+ const pointers=new Map();
+ function distance(){const a=[...pointers.values()];return Math.hypot(a[0].x-a[1].x,a[0].y-a[1].y)}
+ img.addEventListener('pointerdown',e=>{if(dlg.hidden)return;img.setPointerCapture(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.size===1){drag={x:e.clientX,y:e.clientY};img.classList.add('is-panning')}if(pointers.size===2){pinch=distance();drag=null}});
+ img.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;const old=pointers.get(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.size===2){const d=distance();if(pinch){scale*=d/pinch;apply()}pinch=d}else if(pointers.size===1&&scale>1){x+=e.clientX-old.x;y+=e.clientY-old.y;apply()}});
+ function end(e){pointers.delete(e.pointerId);if(pointers.size<2)pinch=null;if(!pointers.size){drag=null;img.classList.remove('is-panning')}}
+ img.addEventListener('pointerup',end);img.addEventListener('pointercancel',end);
+ // Reset whenever gallery image changes or gallery is reopened.
+ new MutationObserver(()=>{if(dlg.hidden)reset()}).observe(dlg,{attributes:true,attributeFilter:['hidden']});
+ new MutationObserver(reset).observe(img,{attributes:true,attributeFilter:['src']});
+ // Existing touch swipe navigation stays enabled at 100% zoom; disable it when zoomed.
+ img.addEventListener('touchend',e=>{if(scale>1)e.stopImmediatePropagation()},{capture:true,passive:true});
 });
 </script>
 </body>
