@@ -293,7 +293,13 @@ body{color-scheme:light!important;background:#f4f7fb!important;color:#17243b!imp
 .tableau-tag.dimension,.learning-chip.dimension{background:#dbeafe!important;color:#1d4ed8!important;border:1px solid #93c5fd!important}
 .tableau-tag.measure,.learning-chip.measure{background:#dcfce7!important;color:#166534!important;border:1px solid #86efac!important}
 .tableau-tag.other-term{background:#ede9fe!important;color:#6d28d9!important;border:1px solid #c4b5fd!important}
-</style></head>
+</style><style id="semantic-color-only-patch">
+.tableau-tag.dimension,.learning-chip.dimension{background:#dbeafe!important;color:#1d4ed8!important}
+.tableau-tag.measure,.learning-chip.measure{background:#dcfce7!important;color:#166534!important}
+.tableau-tag.other-term{background:#f1f5f9!important;color:#334155!important}
+.tableau-tag.important{background:#fef3c7!important;color:#92400e!important}
+.tableau-tag.result{background:#dcfce7!important;color:#166534!important}
+</style><style>.learning-chip.neutral{background:#f1f5f9;color:#334155}</style></head>
 <body class="antialiased">
 <!-- Top Sticky Navigation & Action Bar -->
 <nav class="reader-topbar no-print"><div class="reader-topbar-inner"><button aria-controls="readerSidebar" aria-expanded="false" aria-label="فتح قائمة المحتويات" class="reader-icon-btn" id="menuToggle">☰</button><select id="mobileSectionSelect" class="mobile-section-select" aria-label="اختر قسمًا / Choose section"><option value="simple-learning">🎯 دليل مبسط + العلاقات + أشهر الأخطاء</option><option value="">☰ الأقسام / Sections</option></select><a class="hub-back" href="../">⌂ Home / الرئيسية</a><div class="reader-brand"><strong>Tableau Study Guide</strong><span>Data Analysis Diploma · دليل تفاعلي</span></div><div class="reader-tools"><button aria-label="بحث" class="reader-icon-btn" id="searchToggle">⌕</button><button class="reader-icon-btn" id="settingsToggle" aria-label="الإعدادات / Settings" aria-expanded="false" aria-controls="readerSettings" title="الإعدادات">⚙</button></div><button aria-label="Switch language" class="hub-lang" id="hubLangToggle" type="button">English</button></div><div class="reader-settings" id="readerSettings" role="group" aria-label="إعدادات القراءة"><div class="settings-heading">⚙ إعدادات القراءة <span>Reading settings</span></div><div class="settings-subtitle">حجم الخط / Text size</div><div aria-label="التحكم في حجم النص" class="reader-size-controls"><button aria-label="تصغير الخط" id="fontDecrease">A−</button><span id="fontValue">90%</span><button aria-label="تكبير الخط" id="fontIncrease">A+</button><button aria-label="إعادة الحجم الافتراضي" id="fontReset">إعادة ضبط / Reset</button></div><div class="settings-note">☀ الوضع الفاتح مفعّل دائمًا</div></div><div class="reader-search" id="readerSearch"><input aria-label="البحث في الدليل" autocomplete="off" id="readerSearchInput" placeholder="ابحث في الفصول والشرح... Search Tableau" type="search"/><button aria-label="مسح البحث" id="searchClear">✕</button><div aria-live="polite" id="searchResults" role="status"></div></div></nav><div class="reader-backdrop no-print" id="readerBackdrop"></div><aside class="reader-sidebar no-print" id="readerSidebar"><div class="sidebar-header"><strong>📚 المحتويات</strong><button aria-label="إغلاق القائمة" id="sidebarClose">✕</button></div><div class="sidebar-search-hint">اختار عنوان الدرس من القائمة</div><div class="sidebar-filter-box"><input id="sidebarFilter" type="search" autocomplete="off" placeholder="ابحث عن درس... / Search topics" aria-label="بحث في عناوين الدروس"><button id="sidebarFilterClear" type="button" aria-label="مسح البحث">×</button></div><p id="sidebarFilterEmpty" class="sidebar-empty" hidden>لا توجد نتائج / No matching topics</p><div class="sidebar-links" id="sidebarLinks"><a href="#simple-learning">🎯 دليل مبسط · Relationships · Errors</a></div><div class="sidebar-footer">Light mode دائمًا ☀️</div></aside>
@@ -374,7 +380,7 @@ body{color-scheme:light!important;background:#f4f7fb!important;color:#17243b!imp
 <div class="example">👤 Customers: عميل واحد = صف واحد. 🛒 Orders: طلب واحد = صف واحد. اربط Customer ID ↔ Customer ID.</div>
 <div class="fix">✅ اختبر <strong>COUNTD(Order ID)</strong> و<strong>SUM(Sales)</strong> قبل وبعد إضافة البيانات.</div></article>
 <article class="learn-card"><h3>🧱 Join ولا Union؟</h3>
-<ul><li><span class="learning-chip violet">Join</span> عايز تضيف <strong>أعمدة</strong> من جدول لجدول حسب مفتاح؟ استخدم Join بعد فهم عدد الصفوف.</li><li><span class="learning-chip blue">Union</span> عندك <strong>Sales_Jan</strong> و<strong>Sales_Feb</strong> بنفس الأعمدة؟ استخدم Union عشان تزود الصفوف.</li><li><span class="learning-chip green">Relationship</span> عندك جداول بمستويات تفاصيل مختلفة؟ غالبًا ابدأ بيها.</li></ul>
+<ul><li><span class="learning-chip violet">Join</span> عايز تضيف <strong>أعمدة</strong> من جدول لجدول حسب مفتاح؟ استخدم Join بعد فهم عدد الصفوف.</li><li><span class="learning-chip neutral">Union</span> عندك <strong>Sales_Jan</strong> و<strong>Sales_Feb</strong> بنفس الأعمدة؟ استخدم Union عشان تزود الصفوف.</li><li><span class="learning-chip neutral">Relationship</span> عندك جداول بمستويات تفاصيل مختلفة؟ غالبًا ابدأ بيها.</li></ul>
 <div class="example">مثال Join: Products + Categories. مثال Union: January Sales + February Sales.</div>
 <div class="fix">⚠️ Join مع One-to-Many ممكن يكرر صفوف ويضاعف SUM؛ راجع الـGrain والمفتاح.</div></article>
 </div>
@@ -404,7 +410,7 @@ body{color-scheme:light!important;background:#f4f7fb!important;color:#17243b!imp
 <h2 class="text-2xl font-extrabold rm-h">🧭 Dashboard Roadmap — خريطة الطريق لأي Dashboard</h2>
 <p class="hub-en-heading">Data → Relations → Fields → Charts → Dashboard</p>
 <div class="rm-sum" style="margin-top:0"><b>الملخص في 5 سطور:</b><ol><li><b>Data:</b> حدد سؤال العمل والـGrain (صف = إيه؟) وافحص الأنواع والـNulls.</li><li><b>Relations:</b> اربط الجداول بـRelationship على المفتاح، واختبر SUM قبل/بعد الربط.</li><li><b>Fields:</b> Dimension (أزرق) = التقسيم، Measure (أخضر) = القياس؛ اعمل Calculated Fields للـKPIs.</li><li><b>Charts:</b> السؤال يحدد الرسم: مقارنة=Bar، زمن=Line، علاقة=Scatter، حصة=Treemap.</li><li><b>Dashboard:</b> KPIs فوق، اتجاهات وسط، تفاصيل تحت، فلاتر + Actions، ثم اختبار الأرقام.</li></ol></div>
-<div class="rm-box" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center"><b>🎨 مفتاح الألوان:</b><span class="rm-pill d" style="cursor:default">Blue = Dimension</span><span class="rm-pill m" style="cursor:default">Green = Measure</span><span class="rm-pill" style="cursor:default;background:#f28e2b;color:#fff">Orange = تحذير</span><span class="rm-pill" style="cursor:default;background:#e15759;color:#fff">Red = قيمة سالبة / خسارة</span></div>
+<div class="rm-box" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center"><b>🎨 مفتاح الألوان:</b><span class="rm-pill d" style="cursor:default">Blue = Dimension / Discrete</span><span class="rm-pill m" style="cursor:default">Green = Measure / Continuous</span><span class="rm-pill" style="cursor:default;background:#f28e2b;color:#fff">Orange = تحذير</span><span class="rm-pill" style="cursor:default;background:#e15759;color:#fff">Red = قيمة سالبة / خسارة</span></div>
 <div class="rm-steps" id="rmS" role="tablist"></div>
 
 <div class="rm-p on" data-i="0"><div class="rm-g"><div class="rm-box"><b>🎯 الهدف:</b> بيانات نظيفة ومفهومة قبل أي رسم.<ul class="list-disc pr-5 mt-2"><li>Connect → Excel/CSV/DB ثم اسحب الجدول لـCanvas.</li><li>Live للبيانات الحية، Extract للسرعة.</li><li>راجع النوع: String / Number / Date / Geographic Role.</li><li>Nulls مش صفر إلا لو المعنى يسمح.</li></ul><div class="rm-box w mt-2">⚠️ Grain هنا: <b>صف = طلب واحد</b>. اكتب الـGrain لكل جدول.</div></div>
@@ -2196,36 +2202,5 @@ document.addEventListener('DOMContentLoaded',()=>{
  document.addEventListener('keydown',e=>{if(dialog.hidden)return;if(e.key==='Escape')hide();if(e.key==='Tab'){const focusable=[...dialog.querySelectorAll('button:not([hidden]),input')].filter(el=>el.getClientRects().length);if(!focusable.length)return;const first=focusable[0],last=focusable.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
 });
 </script>
-<style id="global-semantic-tag-colors">
-/* Educational semantic colors, applied across the entire guide. */
-.tableau-tag.term,.tableau-tag.neutral,.learning-chip.neutral{background:#f1f5f9!important;color:#334155!important;border:1px solid #cbd5e1!important}
-.tableau-tag.dimension,.learning-chip.dimension,.rm-pill.d{background:#dbeafe!important;color:#1d4ed8!important;border:1px solid #93c5fd!important}
-.tableau-tag.measure,.learning-chip.measure,.rm-pill.m{background:#dcfce7!important;color:#166534!important;border:1px solid #86efac!important}
-.tableau-tag.important,.learning-chip.amber{background:#fef3c7!important;color:#92400e!important;border:1px solid #fcd34d!important}
-.tableau-tag.result,.learning-chip.result{background:#dcfce7!important;color:#166534!important;border:1px solid #86efac!important}
-</style>
-<script id="global-semantic-tag-colors-js">
-(()=>{
- const dim=/^(dimensions?|dimension\s*\([^)]*\)|region|category|sub.?category|customer(?:\s*(?:id|name))?|product(?:\s*(?:id|name))?|segment|city|country|state|order\s*date|date|year|month)$/i;
- const mea=/^(measures?|measure\s*\([^)]*\)|(?:sum|avg|average|min|max|count|countd)\s*\([^)]*\)|sales|profit|quantity|discount|revenue|total\s*sales|total\s*profit)$/i;
- function semantic(el){
-   const t=(el.textContent||'').trim().replace(/^[🔵🟢]\s*/,'');
-   if(!t)return;
-   // Explicit terms are always colored correctly, even in the middle of headings.
-   const d=/\b(?:dimensions?)\b/i.test(t),m=/\b(?:measures?)\b/i.test(t);
-   const isD=dim.test(t)|| (d&&!m && t.length<70);
-   const isM=mea.test(t)|| (m&&!d && t.length<70);
-   if(isD||isM){el.classList.remove('term','dimension','measure','neutral','blue','green');el.classList.add(isD?'dimension':'measure')}
-   else if(el.classList.contains('tableau-tag')&&!el.classList.contains('important')&&!el.classList.contains('result')){
-      el.classList.remove('dimension','measure','term');el.classList.add('neutral');
-   }
- }
- function run(){document.querySelectorAll('.tableau-tag,.learning-chip,.rm-pill.d,.rm-pill.m').forEach(semantic)}
- document.addEventListener('DOMContentLoaded',()=>{run();setTimeout(run,0);setTimeout(run,500);
- const root=document.querySelector('main')||document.body;
- let pending=false;
- new MutationObserver(()=>{if(pending)return;pending=true;requestAnimationFrame(()=>{pending=false;run()})}).observe(root,{childList:true,subtree:true});
- });
-})();
-</script></body>
+</body>
 </html>
