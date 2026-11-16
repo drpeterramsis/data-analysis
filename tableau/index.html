@@ -299,7 +299,23 @@ body{color-scheme:light!important;background:#f4f7fb!important;color:#17243b!imp
 .tableau-tag.other-term{background:#f1f5f9!important;color:#334155!important}
 .tableau-tag.important{background:#fef3c7!important;color:#92400e!important}
 .tableau-tag.result{background:#dcfce7!important;color:#166534!important}
-</style><style>.learning-chip.neutral{background:#f1f5f9;color:#334155}</style></head>
+</style><style>.learning-chip.neutral{background:#f1f5f9;color:#334155}</style><style id="clean-learning-layout-fix">
+/* Only the added learning section: avoid globally changing site typography. */
+#simple-learning{font-size:16px!important;line-height:1.65!important;letter-spacing:normal!important}
+#simple-learning .learn-grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr))!important;gap:16px!important;align-items:stretch!important}
+#simple-learning .learn-card{min-width:0!important;overflow-wrap:break-word!important;padding:18px!important;line-height:1.65!important}
+#simple-learning .learn-card h3{font-size:clamp(17px,1.2vw + 11px,21px)!important;line-height:1.4!important;margin:0 0 12px!important}
+#simple-learning .learn-card li{font-size:clamp(14px,.5vw + 10px,16px)!important;line-height:1.7!important;margin:7px 0!important}
+#simple-learning .learn-card p{font-size:inherit!important}
+#simple-learning .learn-card :is(strong,code){overflow-wrap:anywhere}
+#simple-learning .learning-chip{display:inline!important;padding:1px 5px!important;border-radius:5px!important;font-size:.84em!important;line-height:inherit!important;white-space:normal!important;vertical-align:baseline!important}
+#simple-learning .learning-chip:not(.dimension):not(.measure):not(.blue):not(.green){background:transparent!important;border:0!important;color:inherit!important;padding:0!important}
+#simple-learning .learning-chip.dimension,#simple-learning .learning-chip.blue{background:#dbeafe!important;color:#1d4ed8!important;border:1px solid #bfdbfe!important}
+#simple-learning .learning-chip.measure,#simple-learning .learning-chip.green{background:#dcfce7!important;color:#166534!important;border:1px solid #bbf7d0!important}
+#simple-learning .learn-flow span{font-size:clamp(13px,.5vw + 10px,16px)!important;padding:6px 10px!important}
+#simple-learning .example,#simple-learning .fix{font-size:clamp(14px,.5vw + 10px,16px)!important;line-height:1.7!important}
+@media(max-width:600px){#simple-learning{font-size:15px!important}#simple-learning .learn-card{padding:14px!important}}
+</style></head>
 <body class="antialiased">
 <!-- Top Sticky Navigation & Action Bar -->
 <nav class="reader-topbar no-print"><div class="reader-topbar-inner"><button aria-controls="readerSidebar" aria-expanded="false" aria-label="فتح قائمة المحتويات" class="reader-icon-btn" id="menuToggle">☰</button><select id="mobileSectionSelect" class="mobile-section-select" aria-label="اختر قسمًا / Choose section"><option value="simple-learning">🎯 دليل مبسط + العلاقات + أشهر الأخطاء</option><option value="">☰ الأقسام / Sections</option></select><a class="hub-back" href="../">⌂ Home / الرئيسية</a><div class="reader-brand"><strong>Tableau Study Guide</strong><span>Data Analysis Diploma · دليل تفاعلي</span></div><div class="reader-tools"><button aria-label="بحث" class="reader-icon-btn" id="searchToggle">⌕</button><button class="reader-icon-btn" id="settingsToggle" aria-label="الإعدادات / Settings" aria-expanded="false" aria-controls="readerSettings" title="الإعدادات">⚙</button></div><button aria-label="Switch language" class="hub-lang" id="hubLangToggle" type="button">English</button></div><div class="reader-settings" id="readerSettings" role="group" aria-label="إعدادات القراءة"><div class="settings-heading">⚙ إعدادات القراءة <span>Reading settings</span></div><div class="settings-subtitle">حجم الخط / Text size</div><div aria-label="التحكم في حجم النص" class="reader-size-controls"><button aria-label="تصغير الخط" id="fontDecrease">A−</button><span id="fontValue">90%</span><button aria-label="تكبير الخط" id="fontIncrease">A+</button><button aria-label="إعادة الحجم الافتراضي" id="fontReset">إعادة ضبط / Reset</button></div><div class="settings-note">☀ الوضع الفاتح مفعّل دائمًا</div></div><div class="reader-search" id="readerSearch"><input aria-label="البحث في الدليل" autocomplete="off" id="readerSearchInput" placeholder="ابحث في الفصول والشرح... Search Tableau" type="search"/><button aria-label="مسح البحث" id="searchClear">✕</button><div aria-live="polite" id="searchResults" role="status"></div></div></nav><div class="reader-backdrop no-print" id="readerBackdrop"></div><aside class="reader-sidebar no-print" id="readerSidebar"><div class="sidebar-header"><strong>📚 المحتويات</strong><button aria-label="إغلاق القائمة" id="sidebarClose">✕</button></div><div class="sidebar-search-hint">اختار عنوان الدرس من القائمة</div><div class="sidebar-filter-box"><input id="sidebarFilter" type="search" autocomplete="off" placeholder="ابحث عن درس... / Search topics" aria-label="بحث في عناوين الدروس"><button id="sidebarFilterClear" type="button" aria-label="مسح البحث">×</button></div><p id="sidebarFilterEmpty" class="sidebar-empty" hidden>لا توجد نتائج / No matching topics</p><div class="sidebar-links" id="sidebarLinks"><a href="#simple-learning">🎯 دليل مبسط · Relationships · Errors</a></div><div class="sidebar-footer">Light mode دائمًا ☀️</div></aside>
@@ -2048,7 +2064,7 @@ document.addEventListener('DOMContentLoaded',()=>{
  document.addEventListener('keydown',e=>{if(dialog.hidden)return;if(e.key==='Escape')hide();if(e.key==='ArrowLeft')show(current-1);if(e.key==='ArrowRight')show(current+1);if(e.key==='Tab'){e.preventDefault();close.focus()}});
  let sx=0;large.addEventListener('touchstart',e=>{sx=e.changedTouches[0]?.screenX||0},{passive:true});large.addEventListener('touchend',e=>{const dx=(e.changedTouches[0]?.screenX||0)-sx;if(Math.abs(dx)>60)show(current+(dx<0?1:-1))},{passive:true});
  // Highlight terminology, key concepts and results without replacing existing illustrations.
- const terms=/\b(?:Tableau Public|Calculated Fields?|Dimensions?|Measures?|Discrete|Continuous|Marks Card|Show Me|Filters?|Parameters?|Dashboard|Worksheet|Relationships?|Joins?|Unions?|LOD|Table Calculations?|Scatter Plot|Line Chart|Bar Chart|Histogram|Heat Map|Tree ?Map|Color|Rows|Columns)\b/gi;
+ const terms=/(?!)/gi;
  const importance=/(?:مهم جدًا|مهم جدا|ملاحظة مهمة|احذر|تنبيه|Important|Warning|نصيحة مهمة)/gi;
  const results=/(?:النتيجة|الاستنتاج|الخلاصة|Result|Output|Insight)/gi;
  const container=document.querySelector('main')||document.body;
@@ -2120,11 +2136,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 <style id="topic-popup-responsive-css">
 /* Scales reading typography with viewport; preserves exact-size Tableau mockups. */
-:root{--reading-body:clamp(13px,1.05vw + 9px,17px);--reading-heading:clamp(19px,1.8vw + 13px,29px)}
-#readerMain{font-size:var(--reading-body);line-height:1.75}
-#readerMain section.study-card :is(p,li){font-size:inherit;line-height:1.75}
-#readerMain section.study-card>h2{font-size:var(--reading-heading)!important;line-height:1.35;overflow-wrap:anywhere}
-#readerMain section.study-card>h3{font-size:clamp(17px,1.3vw + 12px,23px)!important;line-height:1.4}
+
 #readerMain :is(img,svg){max-width:100%}
 #mobileSectionSelect{display:none!important}
 #topicPickerButton{display:inline-flex;align-items:center;gap:7px;justify-content:center;border:1px solid #cbd5e1;border-radius:10px;background:white;color:#1e3a5f;padding:8px 12px;font-weight:700;font-size:clamp(12px,1vw + 9px,14px);cursor:pointer;max-width:min(42vw,220px);white-space:nowrap}
