@@ -259,10 +259,44 @@ body{color-scheme:light!important;background:#f4f7fb!important;color:#17243b!imp
 .mobile-section-select{display:none;max-width:155px;min-width:0;border:1px solid #d6e1ef;border-radius:10px;background:#f6f9fe;color:#173153;font-size:12px;font-weight:700;padding:8px 5px;outline-offset:2px}
 @media(max-width:760px){.mobile-section-select{display:block;flex:1;max-width:150px}#menuToggle{display:none!important}.reader-brand{display:none!important}.reader-topbar-inner{gap:5px!important;padding:7px 8px!important}.reader-tools{margin-inline-start:auto!important}.hub-back{font-size:11px!important;padding:7px!important;white-space:nowrap}.hub-lang{font-size:11px!important;padding:7px!important}.reader-main{padding:10px!important;font-size:calc(14px * var(--reader-scale))!important}.reader-main :is(.text-3xl){font-size:calc(22px * var(--reader-scale))!important}.reader-main :is(.text-2xl){font-size:calc(20px * var(--reader-scale))!important}.reader-main :is(.text-xl){font-size:calc(18px * var(--reader-scale))!important}.reader-main .study-card{padding:14px!important}.reader-main .grid{min-width:0}.reader-main .reader-hero{padding:15px!important}.reader-sidebar{display:none!important}.reader-backdrop{display:none!important}}
 @media(max-width:390px){.mobile-section-select{max-width:108px;font-size:11px}.hub-back{max-width:85px;overflow:hidden;text-overflow:ellipsis}.reader-topbar-inner{gap:3px!important}.reader-icon-btn{min-width:33px!important;padding:5px!important}}
+</style>
+<style id="tableau-true-color-tags">
+.tableau-tag.dimension{background:#dbeafe!important;color:#1d4ed8!important;border:1px solid #93c5fd!important}
+.tableau-tag.measure{background:#dcfce7!important;color:#166534!important;border:1px solid #86efac!important}
+.tableau-tag.important{background:#fef3c7!important;color:#92400e!important;border:1px solid #fcd34d!important}
+.tableau-tag.result{background:#dcfce7!important;color:#166534!important;border:1px solid #86efac!important}
+.learning-chip{display:inline-block;padding:2px 9px;border-radius:999px;font-size:.84em;font-weight:750;vertical-align:baseline}
+.learning-chip.blue{background:#dbeafe;color:#1d4ed8;border:1px solid #93c5fd}
+.learning-chip.green{background:#dcfce7;color:#166534;border:1px solid #86efac}
+.learning-chip.amber{background:#fef3c7;color:#92400e;border:1px solid #fcd34d}
+.learning-chip.red{background:#fee2e2;color:#991b1b;border:1px solid #fca5a5}
+.learning-chip.violet{background:#ede9fe;color:#6d28d9;border:1px solid #c4b5fd}
+#simple-learning{font-size:clamp(14px,1vw + 10px,17px)}
+#simple-learning h2{font-size:clamp(20px,2.2vw,28px);color:#173c68;font-weight:850}
+#simple-learning h3{font-size:clamp(17px,1.6vw,22px);font-weight:800;color:#173c68}
+#simple-learning .learn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:13px}
+#simple-learning .learn-card{border:1px solid #dce6f2;border-radius:15px;background:#fff;padding:15px;box-shadow:0 3px 12px #1e3a5f0a}
+#simple-learning .learn-card ul{list-style:disc;padding-inline-start:22px;margin:8px 0;line-height:1.75}
+#simple-learning .learn-card li{margin:5px 0}
+#simple-learning .learn-card .example{border-inline-start:3px solid #60a5fa;background:#eff6ff;border-radius:8px;padding:10px;margin-top:10px}
+#simple-learning .learn-card .fix{border-inline-start:3px solid #4ade80;background:#f0fdf4;border-radius:8px;padding:10px;margin-top:10px}
+#simple-learning details.learn-more{margin-top:12px;border:1px solid #cbd5e1;border-radius:10px;background:#f8fafc}
+#simple-learning details.learn-more>summary{padding:10px 12px;cursor:pointer;font-weight:750}
+#simple-learning details.learn-more>div{padding:0 12px 12px}
+#simple-learning .learn-flow{display:flex;flex-wrap:wrap;align-items:center;gap:7px}
+#simple-learning .learn-flow span{border-radius:9px;padding:7px 11px;background:#eaf3ff;color:#1e40af;font-weight:700}
+#simple-learning .learn-flow b{color:#64748b}
+@media(max-width:640px){#simple-learning .learn-card{padding:12px}}
+</style>
+<style id="fixed-educational-color-legend">
+/* Educational color scheme: Dimensions BLUE, Measures GREEN. Tableau pills retain their own actual meaning. */
+.tableau-tag.dimension,.learning-chip.dimension{background:#dbeafe!important;color:#1d4ed8!important;border:1px solid #93c5fd!important}
+.tableau-tag.measure,.learning-chip.measure{background:#dcfce7!important;color:#166534!important;border:1px solid #86efac!important}
+.tableau-tag.other-term{background:#ede9fe!important;color:#6d28d9!important;border:1px solid #c4b5fd!important}
 </style></head>
 <body class="antialiased">
 <!-- Top Sticky Navigation & Action Bar -->
-<nav class="reader-topbar no-print"><div class="reader-topbar-inner"><button aria-controls="readerSidebar" aria-expanded="false" aria-label="فتح قائمة المحتويات" class="reader-icon-btn" id="menuToggle">☰</button><select id="mobileSectionSelect" class="mobile-section-select" aria-label="اختر قسمًا / Choose section"><option value="">☰ الأقسام / Sections</option></select><a class="hub-back" href="../">⌂ Home / الرئيسية</a><div class="reader-brand"><strong>Tableau Study Guide</strong><span>Data Analysis Diploma · دليل تفاعلي</span></div><div class="reader-tools"><button aria-label="بحث" class="reader-icon-btn" id="searchToggle">⌕</button><button class="reader-icon-btn" id="settingsToggle" aria-label="الإعدادات / Settings" aria-expanded="false" aria-controls="readerSettings" title="الإعدادات">⚙</button></div><button aria-label="Switch language" class="hub-lang" id="hubLangToggle" type="button">English</button></div><div class="reader-settings" id="readerSettings" role="group" aria-label="إعدادات القراءة"><div class="settings-heading">⚙ إعدادات القراءة <span>Reading settings</span></div><div class="settings-subtitle">حجم الخط / Text size</div><div aria-label="التحكم في حجم النص" class="reader-size-controls"><button aria-label="تصغير الخط" id="fontDecrease">A−</button><span id="fontValue">90%</span><button aria-label="تكبير الخط" id="fontIncrease">A+</button><button aria-label="إعادة الحجم الافتراضي" id="fontReset">إعادة ضبط / Reset</button></div><div class="settings-note">☀ الوضع الفاتح مفعّل دائمًا</div></div><div class="reader-search" id="readerSearch"><input aria-label="البحث في الدليل" autocomplete="off" id="readerSearchInput" placeholder="ابحث في الفصول والشرح... Search Tableau" type="search"/><button aria-label="مسح البحث" id="searchClear">✕</button><div aria-live="polite" id="searchResults" role="status"></div></div></nav><div class="reader-backdrop no-print" id="readerBackdrop"></div><aside class="reader-sidebar no-print" id="readerSidebar"><div class="sidebar-header"><strong>📚 المحتويات</strong><button aria-label="إغلاق القائمة" id="sidebarClose">✕</button></div><div class="sidebar-search-hint">اختار عنوان الدرس من القائمة</div><div class="sidebar-filter-box"><input id="sidebarFilter" type="search" autocomplete="off" placeholder="ابحث عن درس... / Search topics" aria-label="بحث في عناوين الدروس"><button id="sidebarFilterClear" type="button" aria-label="مسح البحث">×</button></div><p id="sidebarFilterEmpty" class="sidebar-empty" hidden>لا توجد نتائج / No matching topics</p><div class="sidebar-links" id="sidebarLinks"></div><div class="sidebar-footer">Light mode دائمًا ☀️</div></aside>
+<nav class="reader-topbar no-print"><div class="reader-topbar-inner"><button aria-controls="readerSidebar" aria-expanded="false" aria-label="فتح قائمة المحتويات" class="reader-icon-btn" id="menuToggle">☰</button><select id="mobileSectionSelect" class="mobile-section-select" aria-label="اختر قسمًا / Choose section"><option value="simple-learning">🎯 دليل مبسط + العلاقات + أشهر الأخطاء</option><option value="">☰ الأقسام / Sections</option></select><a class="hub-back" href="../">⌂ Home / الرئيسية</a><div class="reader-brand"><strong>Tableau Study Guide</strong><span>Data Analysis Diploma · دليل تفاعلي</span></div><div class="reader-tools"><button aria-label="بحث" class="reader-icon-btn" id="searchToggle">⌕</button><button class="reader-icon-btn" id="settingsToggle" aria-label="الإعدادات / Settings" aria-expanded="false" aria-controls="readerSettings" title="الإعدادات">⚙</button></div><button aria-label="Switch language" class="hub-lang" id="hubLangToggle" type="button">English</button></div><div class="reader-settings" id="readerSettings" role="group" aria-label="إعدادات القراءة"><div class="settings-heading">⚙ إعدادات القراءة <span>Reading settings</span></div><div class="settings-subtitle">حجم الخط / Text size</div><div aria-label="التحكم في حجم النص" class="reader-size-controls"><button aria-label="تصغير الخط" id="fontDecrease">A−</button><span id="fontValue">90%</span><button aria-label="تكبير الخط" id="fontIncrease">A+</button><button aria-label="إعادة الحجم الافتراضي" id="fontReset">إعادة ضبط / Reset</button></div><div class="settings-note">☀ الوضع الفاتح مفعّل دائمًا</div></div><div class="reader-search" id="readerSearch"><input aria-label="البحث في الدليل" autocomplete="off" id="readerSearchInput" placeholder="ابحث في الفصول والشرح... Search Tableau" type="search"/><button aria-label="مسح البحث" id="searchClear">✕</button><div aria-live="polite" id="searchResults" role="status"></div></div></nav><div class="reader-backdrop no-print" id="readerBackdrop"></div><aside class="reader-sidebar no-print" id="readerSidebar"><div class="sidebar-header"><strong>📚 المحتويات</strong><button aria-label="إغلاق القائمة" id="sidebarClose">✕</button></div><div class="sidebar-search-hint">اختار عنوان الدرس من القائمة</div><div class="sidebar-filter-box"><input id="sidebarFilter" type="search" autocomplete="off" placeholder="ابحث عن درس... / Search topics" aria-label="بحث في عناوين الدروس"><button id="sidebarFilterClear" type="button" aria-label="مسح البحث">×</button></div><p id="sidebarFilterEmpty" class="sidebar-empty" hidden>لا توجد نتائج / No matching topics</p><div class="sidebar-links" id="sidebarLinks"><a href="#simple-learning">🎯 دليل مبسط · Relationships · Errors</a></div><div class="sidebar-footer">Light mode دائمًا ☀️</div></aside>
 <!-- Main Container -->
 <main class="max-w-6xl mx-auto px-4 py-7 space-y-6 reader-main" id="readerMain">
 <!-- Hero Banner -->
@@ -316,7 +350,57 @@ body{color-scheme:light!important;background:#f4f7fb!important;color:#17243b!imp
 <style>
 #rm-road{direction:rtl;border:2px solid #1f3b5c}.rm-h{font-weight:800;color:#1f3b5c}.rm-steps{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}.rm-steps button{flex:1;min-width:112px;border:1px solid #cfdbe8;background:#f6f8fb;border-radius:12px;padding:8px 6px;font:700 13px Cairo,sans-serif;color:#1f3b5c;cursor:pointer}.rm-steps button b{display:block;font-size:20px}.rm-steps button.on{background:#1f3b5c;color:#fff;border-color:#1f3b5c}.rm-p{display:none;animation:rmf .3s}.rm-p.on{display:block}@keyframes rmf{from{opacity:0;transform:translateY(6px)}to{opacity:1}}.rm-g{display:grid;gap:14px;grid-template-columns:1fr 1fr}@media(max-width:760px){.rm-g{grid-template-columns:1fr}}.rm-box{background:#f6f8fb;border:1px solid #d9dfe6;border-radius:12px;padding:12px;font-size:14px}.rm-box.w{background:#fff4e6;border-color:#f5cf9b}.rm-t{direction:ltr;width:100%;border-collapse:collapse;font-size:12px;background:#fff}.rm-t th,.rm-t td{border:1px solid #d9dfe6;padding:5px 8px;text-align:left}.rm-t td.n{text-align:right;font-family:'JetBrains Mono',monospace}.rm-d{background:#4e79a7;color:#fff}.rm-m{background:#59a14f;color:#fff}.rm-pill{display:inline-block;border-radius:99px;padding:1px 10px;font:600 12px 'JetBrains Mono',monospace;direction:ltr;margin:2px;cursor:pointer;border:2px solid transparent}.rm-pill.d{background:#4e79a7;color:#fff}.rm-pill.m{background:#59a14f;color:#fff}.rm-pill.on{border-color:#f28e2b}.rm-sw{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}.rm-sw button{border:1px solid #cfdbe8;background:#fff;border-radius:99px;padding:4px 12px;font:700 12px Cairo,sans-serif;cursor:pointer}.rm-sw button.on{background:#f28e2b;border-color:#f28e2b;color:#fff}.rm-sum{background:#e8f1fa;border-radius:12px;padding:12px;margin-top:14px;font-size:14px}.rm-sum ol{padding-right:20px;margin:6px 0 0;list-style:decimal}.rm-ck label{display:flex;gap:8px;align-items:start;padding:4px 0;border-bottom:1px solid #eef2f6;font-size:14px}.rm svg{max-width:100%;height:auto}
 </style>
-<section class="study-card bg-white rounded-2xl p-6 shadow-sm space-y-4" id="rm-road">
+
+<section id="simple-learning" class="study-card bg-white rounded-2xl p-6 shadow-sm space-y-4" dir="rtl">
+<h2>🎯 دليل Tableau المبسّط: اختار صح، وابعد عن الأخطاء</h2>
+<p>ابدأ بالسؤال، وبعده اختار البيانات والرسم. <span class="learning-chip dimension">🔵 Dimension</span> <span class="learning-chip measure">🟢 Measure</span> دي ألوان ثابتة في الشرح؛ ألوان الـPills الأصلية في Tableau ليها معنى مختلف (Discrete / Continuous).</p>
+<div class="learn-flow"><span>❓ سؤال التحليل</span><b>←</b><span>🗂️ البيانات والعلاقات</span><b>←</b><span>📊 Chart</span><b>←</b><span>🔎 مراجعة الأرقام</span><b>←</b><span>🖥️ Dashboard</span></div>
+<div class="learn-grid">
+<article class="learn-card"><h3>🎨 ألوان الشرح: Dimensions وMeasures</h3>
+<ul>
+<li><span class="learning-chip dimension">🔵 Blue = Dimensions</span> أبعاد بتقسم البيانات لفئات، زي <strong>Region</strong> و<strong>Category</strong>.</li>
+<li><span class="learning-chip measure">🟢 Green = Measures</span> مقاييس بنحسبها، زي <strong>Sales</strong> و<strong>Profit</strong>.</li>
+<li>📌 <strong>ده نظام ألوان الشرح في الموقع</strong>. داخل Tableau نفسه لون الـPill بيعبر عن Discrete أو Continuous، ومش شرط نوع الحقل.</li>
+</ul><div class="example">مثال: <span class="learning-chip dimension">Region (Dimension)</span> على Rows + <span class="learning-chip measure">SUM(Sales) (Measure)</span> على Columns = Bar Chart.</div></article>
+<article class="learn-card"><h3>📊 اختار الـChart في ثواني</h3><ul>
+<li>📏 مقارنة منتجات أو مناطق → <strong>Bar Chart</strong>.</li>
+<li>📈 مبيعات على مدار شهور → <strong>Line Chart</strong>.</li>
+<li>🔵 علاقة Sales بـProfit → <strong>Scatter Plot</strong>.</li>
+<li>📦 توزيع أسعار أو أعمار → <strong>Histogram</strong>.</li>
+<li>🧩 فئات × فئات وقيم → <strong>Heat Map</strong>.</li>
+</ul><div class="example">اسأل نفسك: «بقارِن؟ بتابع زمن؟ بشوف علاقة؟ ولا توزيع؟»</div></article>
+<article class="learn-card"><h3>🔗 Relationships: إمتى أختارها؟</h3>
+<ul><li>عندك جدول <strong>Orders</strong> وجدول <strong>Customers</strong>.</li><li>المفتاح المشترك <strong>Customer ID</strong>.</li><li>كل عميل ممكن يعمل طلبات كتير؛ Relationship غالبًا الاختيار الأنسب كبداية لأنه بيحافظ على مستوى تفاصيل كل جدول حسب التحليل.</li><li>اسحب الجدول الثاني بجانب الأول في <strong>Data Source → Logical Layer</strong>، واضبط حقول الربط.</li></ul>
+<div class="example">👤 Customers: عميل واحد = صف واحد. 🛒 Orders: طلب واحد = صف واحد. اربط Customer ID ↔ Customer ID.</div>
+<div class="fix">✅ اختبر <strong>COUNTD(Order ID)</strong> و<strong>SUM(Sales)</strong> قبل وبعد إضافة البيانات.</div></article>
+<article class="learn-card"><h3>🧱 Join ولا Union؟</h3>
+<ul><li><span class="learning-chip violet">Join</span> عايز تضيف <strong>أعمدة</strong> من جدول لجدول حسب مفتاح؟ استخدم Join بعد فهم عدد الصفوف.</li><li><span class="learning-chip blue">Union</span> عندك <strong>Sales_Jan</strong> و<strong>Sales_Feb</strong> بنفس الأعمدة؟ استخدم Union عشان تزود الصفوف.</li><li><span class="learning-chip green">Relationship</span> عندك جداول بمستويات تفاصيل مختلفة؟ غالبًا ابدأ بيها.</li></ul>
+<div class="example">مثال Join: Products + Categories. مثال Union: January Sales + February Sales.</div>
+<div class="fix">⚠️ Join مع One-to-Many ممكن يكرر صفوف ويضاعف SUM؛ راجع الـGrain والمفتاح.</div></article>
+</div>
+<h3>🛠️ أشهر المشاكل والـErrors وحلولها</h3>
+<div class="learn-grid">
+<article class="learn-card"><h3>🔴 الأرقام اتضاعفت بعد الربط</h3><ul><li>السبب الشائع: Join على مفتاح متكرر.</li><li>افحص عدد الصفوف في كل جدول.</li><li>جرّب Relationship بدل Join لو مناسب.</li></ul><div class="fix">✅ قارن SUM(Sales) وCOUNTD(Order ID) قبل وبعد الربط.</div></article>
+<article class="learn-card"><h3>🟠 Null Values أو بيانات ناقصة</h3><ul><li>افحص الحقل والمصدر.</li><li>اتأكد إن مفتاح الربط موجود في الجدولين.</li><li>ما تستبدلش Null بصفر إلا لو المعنى صحيح.</li></ul><div class="fix">✅ اعرض عدد الـNulls وحدد هل هي بيانات ناقصة ولا نتيجة ربط.</div></article>
+<article class="learn-card"><h3>🟠 Cannot mix aggregate and non-aggregate</h3><ul><li>مثال غير صحيح: <code>SUM([Sales]) / [Target]</code> لو Target غير مُجمّع.</li><li>خلّي مستويات التجميع متوافقة.</li></ul><div class="fix">✅ مثال عند ملاءمة البيانات: <code>SUM([Sales]) / SUM([Target])</code>.</div></article>
+<article class="learn-card"><h3>🟠 التاريخ مش ظاهر كتاريخ</h3><ul><li>راجع <strong>Data Type</strong>.</li><li>اتأكد من تنسيق التاريخ في المصدر.</li><li>جرّب تحويله إلى Date بعد التأكد من القيم.</li></ul><div class="fix">✅ استخدم Month أو Quarter في الرسم الزمني.</div></article>
+<article class="learn-card"><h3>🟠 الخريطة مش بتظهر</h3><ul><li>راجع <strong>Geographic Role</strong> للبلد أو المدينة.</li><li>اتأكد من الأسماء الغامضة والـUnknown Locations.</li></ul><div class="fix">✅ Map → Edit Locations لتصحيح المكان.</div></article>
+<article class="learn-card"><h3>🔴 Filter مخفي بيانات مهمة</h3><ul><li>راجع الفلاتر على Worksheet وDashboard.</li><li>اتأكد من <strong>Apply to Worksheets</strong>.</li><li>افحص ترتيب تأثير الفلاتر.</li></ul><div class="fix">✅ جرّب إزالة الفلاتر مؤقتًا وقارن الأرقام.</div></article>
+<article class="learn-card"><h3>🟠 الرسم فاضي أو Show Me مش نشط</h3><ul><li>راجع عدد وأنواع الحقول المطلوبة.</li><li>تأكد إن Measure رقمي.</li><li>افحص Filters وNulls.</li></ul><div class="fix">✅ ابدأ بـDimension واحد + Measure واحد في Bar Chart.</div></article>
+<article class="learn-card"><h3>🐢 Dashboard بطيئة</h3><ul><li>قلل Marks والرسوم الثقيلة.</li><li>قلل الفلاتر غير الضرورية.</li><li>فكّر في Extract لو مناسب لتحديث بياناتك.</li></ul><div class="fix">✅ اختبر الأداء بعد كل تغيير، مش بعد ما تخلص.</div></article>
+</div>
+<details class="learn-more"><summary>📚 شرح إضافي: قاعدة اختيار العلاقة خطوة بخطوة</summary><div>
+<ol style="list-style:decimal;padding-inline-start:22px;line-height:1.9">
+<li>اكتب معنى كل صف: Customers = عميل، Orders = طلب، Order Items = بند طلب.</li>
+<li>حدد المفتاح المشترك: Customer ID أو Order ID.</li>
+<li>اسأل: هل المفتاح متكرر؟ لو متكرر في جدول البنود، Join ممكن يكرر إجمالي الطلب.</li>
+<li>لو هدفك تحليل حقول من جداول بمستويات مختلفة، ابدأ بـRelationship.</li>
+<li>لو محتاج دمج أعمدة على مستوى صف واضح، استخدم Join بعد اختبار التكرار.</li>
+<li>لو بتجمع ملفات بنفس الأعمدة فوق بعض، استخدم Union.</li>
+<li>اعمل Sheet اختبار فيها عدد الطلبات والإجمالي وقارنها بالمصدر.</li>
+</ol></div></details>
+</section>
+<details class="study-card bg-white rounded-2xl p-6 shadow-sm space-y-4" id="rm-road"><summary style="cursor:pointer;font-weight:800;color:#173c68;padding:10px">🧭 افتح الـRoadmap التفصيلية (اختياري) / Detailed roadmap</summary><div>
 <h2 class="text-2xl font-extrabold rm-h">🧭 Dashboard Roadmap — خريطة الطريق لأي Dashboard</h2>
 <p class="hub-en-heading">Data → Relations → Fields → Charts → Dashboard</p>
 <div class="rm-sum" style="margin-top:0"><b>الملخص في 5 سطور:</b><ol><li><b>Data:</b> حدد سؤال العمل والـGrain (صف = إيه؟) وافحص الأنواع والـNulls.</li><li><b>Relations:</b> اربط الجداول بـRelationship على المفتاح، واختبر SUM قبل/بعد الربط.</li><li><b>Fields:</b> Dimension (أزرق) = التقسيم، Measure (أخضر) = القياس؛ اعمل Calculated Fields للـKPIs.</li><li><b>Charts:</b> السؤال يحدد الرسم: مقارنة=Bar، زمن=Line، علاقة=Scatter، حصة=Treemap.</li><li><b>Dashboard:</b> KPIs فوق، اتجاهات وسط، تفاصيل تحت، فلاتر + Actions، ثم اختبار الأرقام.</li></ol></div>
@@ -338,7 +422,7 @@ body{color-scheme:light!important;background:#f4f7fb!important;color:#17243b!imp
 <div class="rm-p" data-i="4"><div class="rm-g"><svg viewBox="0 0 330 210" role="img" aria-label="Dashboard wireframe"><g font-family="Cairo,sans-serif" font-size="11" text-anchor="middle"><rect x="2" y="2" width="326" height="206" rx="8" fill="#fff" stroke="#94a3b8"/><rect x="10" y="10" width="310" height="22" rx="4" fill="#1f3b5c"/><text x="165" y="26" fill="#fff">Title + Filters (Date / Region)</text><g fill="#e8f1fa" stroke="#4e79a7"><rect x="10" y="40" width="72" height="34" rx="4"/><rect x="88" y="40" width="72" height="34" rx="4"/><rect x="166" y="40" width="72" height="34" rx="4"/><rect x="244" y="40" width="76" height="34" rx="4"/></g><text x="46" y="61">Sales</text><text x="124" y="61">Profit</text><text x="202" y="61">Orders</text><text x="282" y="61">AOV</text><rect x="10" y="82" width="190" height="66" rx="4" fill="#eaf6e8" stroke="#59a14f"/><text x="105" y="118">Line: Trend by Month</text><rect x="206" y="82" width="114" height="66" rx="4" fill="#fff4e6" stroke="#f28e2b"/><text x="263" y="118">Bar: Region</text><rect x="10" y="156" width="310" height="46" rx="4" fill="#f6f8fb" stroke="#94a3b8"/><text x="165" y="183">Detail Table</text></g></svg>
 <div class="rm-box rm-ck" id="rmK"><b>Checklist قبل التسليم:</b></div></div></div>
 <p class="text-xs text-slate-500">رسومات تعليمية تفاعلية وليست لقطات من Tableau؛ اللقطات الفعلية في «صور حقيقية» أسفل.</p>
-</section>
+</div></details>
 <script>
 (function(){const $=s=>document.querySelector(s),T=["Data","Relations","Fields","Charts","Dashboard"],I=["📥","🔗","🏷️","📊","🧩"],S=$('#rmS'),P=[...document.querySelectorAll('#rm-road .rm-p')];
 T.forEach((t,i)=>{const b=document.createElement('button');b.innerHTML='<b>'+I[i]+'</b>'+(i+1)+'. '+t;b.onclick=()=>go(i);S.appendChild(b)});
@@ -1966,7 +2050,10 @@ document.addEventListener('DOMContentLoaded',()=>{
  while(walker.nextNode()){const node=walker.currentNode;if(!node.parentElement||node.parentElement.closest('script,style,pre,code,svg,button,a,.tableau-tag,figcaption'))continue;if(node.textContent.length>900||node.textContent.length<4)continue;if(!node.parentElement.closest('p,li,td,h2,h3,h4,strong'))continue;nodes.push(node)}
  const combined=new RegExp('('+terms.source+')|('+importance.source+')|('+results.source+')','gi');
  for(const node of nodes){const text=node.textContent;combined.lastIndex=0;if(!combined.test(text))continue;combined.lastIndex=0;const fragment=document.createDocumentFragment();let last=0,m;
- while((m=combined.exec(text))!==null){if(m.index>last)fragment.append(document.createTextNode(text.slice(last,m.index)));const span=document.createElement('span');span.className='tableau-tag '+(m[1]?'term':m[2]?'important':'result');span.textContent=m[0];fragment.append(span);last=m.index+m[0].length}
+ while((m=combined.exec(text))!==null){if(m.index>last)fragment.append(document.createTextNode(text.slice(last,m.index)));const span=document.createElement('span');const value=m[0].toLowerCase();
+ const isMeasure=/^(measure|measures)$/.test(value);
+ const isDimension=/^(dimension|dimensions)$/.test(value);
+ span.className='tableau-tag '+(m[1]?(isMeasure?'measure':isDimension?'dimension':'other-term'):m[2]?'important':'result');span.textContent=m[0];fragment.append(span);last=m.index+m[0].length}
  if(last<text.length)fragment.append(document.createTextNode(text.slice(last)));node.replaceWith(fragment)}
 });
 </script>
