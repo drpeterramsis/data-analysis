@@ -315,7 +315,34 @@ body{color-scheme:light!important;background:#f4f7fb!important;color:#17243b!imp
 #simple-learning .learn-flow span{font-size:clamp(13px,.5vw + 10px,16px)!important;padding:6px 10px!important}
 #simple-learning .example,#simple-learning .fix{font-size:clamp(14px,.5vw + 10px,16px)!important;line-height:1.7!important}
 @media(max-width:600px){#simple-learning{font-size:15px!important}#simple-learning .learn-card{padding:14px!important}}
-</style></head>
+</style>
+<style id="learning-fix-2026">
+#simple-learning{font-size:16px!important;line-height:1.7!important;max-width:100%;min-width:0;overflow-wrap:break-word}
+#simple-learning h2{font-size:clamp(21px,2vw,27px)!important;line-height:1.45!important;margin:0 0 14px!important;overflow-wrap:break-word}
+#simple-learning h3{font-size:clamp(17px,1.4vw,21px)!important;line-height:1.45!important;margin:0 0 9px!important}
+#simple-learning .learn-grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))!important;gap:16px!important;align-items:stretch}
+#simple-learning .learn-card{min-width:0!important;overflow-wrap:break-word;overflow:hidden;padding:clamp(14px,1.4vw,20px)!important;border-radius:14px}
+#simple-learning .learn-card :is(p,li){font-size:15px!important;line-height:1.8!important}
+#simple-learning .learn-card ul{margin:8px 0!important;padding-inline-start:23px!important;list-style:disc!important}
+#simple-learning .learn-card li{margin:5px 0!important;white-space:normal!important}
+#simple-learning .learning-chip{font-size:.8em!important;display:inline!important;white-space:normal!important;line-height:1.7!important;padding:1px 5px!important;border-radius:5px!important}
+#simple-learning .example,#simple-learning .fix{font-size:14px!important;line-height:1.75!important;overflow-wrap:anywhere}
+#simple-learning .learn-flow{display:flex!important;flex-wrap:wrap!important;gap:8px!important}
+#simple-learning .learn-flow span{font-size:14px!important;padding:7px 10px!important}
+#simple-learning .learn-flow b{align-self:center}
+#simple-learning :is(code,strong){overflow-wrap:anywhere}
+#chapter-panel{border:1px solid #d8e4f0;background:#fff;border-radius:15px;padding:16px;margin:18px 0;box-shadow:0 2px 10px #1e3a5f0a}
+#chapter-panel h2{font-size:clamp(18px,2vw,24px)!important;margin:0 0 6px;color:#173c68;font-weight:800}
+#chapter-panel p{font-size:14px;color:#475569;margin:0 0 12px}
+.chapter-actions{display:flex;flex-wrap:wrap;gap:9px}
+.chapter-actions button{border:1px solid #cbd5e1;background:#f8fafc;color:#173c68;padding:9px 13px;border-radius:10px;font:700 14px system-ui,sans-serif;cursor:pointer;min-height:42px}
+.chapter-actions button[aria-pressed="true"]{background:#1d4ed8;color:#fff;border-color:#1d4ed8}
+.chapter-actions button:hover{border-color:#2563eb}
+#chapter-panel .chapter-help{font-size:13px;margin-top:10px;color:#64748b}
+.chapter-hidden{display:none!important}
+@media(max-width:650px){#simple-learning{font-size:14px!important;padding:14px!important}#simple-learning .learn-grid{grid-template-columns:minmax(0,1fr)!important}#simple-learning .learn-card :is(p,li){font-size:14px!important}#chapter-panel{padding:12px}}
+</style>
+</head>
 <body class="antialiased">
 <!-- Top Sticky Navigation & Action Bar -->
 <nav class="reader-topbar no-print"><div class="reader-topbar-inner"><button aria-controls="readerSidebar" aria-expanded="false" aria-label="فتح قائمة المحتويات" class="reader-icon-btn" id="menuToggle">☰</button><select id="mobileSectionSelect" class="mobile-section-select" aria-label="اختر قسمًا / Choose section"><option value="simple-learning">🎯 دليل مبسط + العلاقات + أشهر الأخطاء</option><option value="">☰ الأقسام / Sections</option></select><a class="hub-back" href="../">⌂ Home / الرئيسية</a><div class="reader-brand"><strong>Tableau Study Guide</strong><span>Data Analysis Diploma · دليل تفاعلي</span></div><div class="reader-tools"><button aria-label="بحث" class="reader-icon-btn" id="searchToggle">⌕</button><button class="reader-icon-btn" id="settingsToggle" aria-label="الإعدادات / Settings" aria-expanded="false" aria-controls="readerSettings" title="الإعدادات">⚙</button></div><button aria-label="Switch language" class="hub-lang" id="hubLangToggle" type="button">English</button></div><div class="reader-settings" id="readerSettings" role="group" aria-label="إعدادات القراءة"><div class="settings-heading">⚙ إعدادات القراءة <span>Reading settings</span></div><div class="settings-subtitle">حجم الخط / Text size</div><div aria-label="التحكم في حجم النص" class="reader-size-controls"><button aria-label="تصغير الخط" id="fontDecrease">A−</button><span id="fontValue">90%</span><button aria-label="تكبير الخط" id="fontIncrease">A+</button><button aria-label="إعادة الحجم الافتراضي" id="fontReset">إعادة ضبط / Reset</button></div><div class="settings-note">☀ الوضع الفاتح مفعّل دائمًا</div></div><div class="reader-search" id="readerSearch"><input aria-label="البحث في الدليل" autocomplete="off" id="readerSearchInput" placeholder="ابحث في الفصول والشرح... Search Tableau" type="search"/><button aria-label="مسح البحث" id="searchClear">✕</button><div aria-live="polite" id="searchResults" role="status"></div></div></nav><div class="reader-backdrop no-print" id="readerBackdrop"></div><aside class="reader-sidebar no-print" id="readerSidebar"><div class="sidebar-header"><strong>📚 المحتويات</strong><button aria-label="إغلاق القائمة" id="sidebarClose">✕</button></div><div class="sidebar-search-hint">اختار عنوان الدرس من القائمة</div><div class="sidebar-filter-box"><input id="sidebarFilter" type="search" autocomplete="off" placeholder="ابحث عن درس... / Search topics" aria-label="بحث في عناوين الدروس"><button id="sidebarFilterClear" type="button" aria-label="مسح البحث">×</button></div><p id="sidebarFilterEmpty" class="sidebar-empty" hidden>لا توجد نتائج / No matching topics</p><div class="sidebar-links" id="sidebarLinks"><a href="#simple-learning">🎯 دليل مبسط · Relationships · Errors</a></div><div class="sidebar-footer">Light mode دائمًا ☀️</div></aside>
@@ -462,6 +489,48 @@ Object.keys(C).forEach((k,i)=>{const b=document.createElement('button');b.textCo
 #mm-map{direction:rtl;border:2px solid #1f3b5c;scroll-margin-top:84px}.mm-top{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.mm-bar{flex:1;min-width:180px;height:12px;background:#e2e8f0;border-radius:99px;overflow:hidden}.mm-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#4e79a7,#59a14f);transition:width .4s}.mm-btn{min-height:44px;border:1px solid #cfdbe8;background:#fff;border-radius:12px;padding:6px 14px;font:700 13px Cairo,sans-serif;color:#1f3b5c;cursor:pointer}.mm-next{background:#fff4e6;border:1px solid #f5cf9b;border-radius:12px;padding:10px 14px;font-size:14px}.mm-root{width:max-content;max-width:100%;margin:6px auto 0;background:#1f3b5c;color:#fff;border-radius:99px;padding:10px 24px;font-weight:800;text-align:center;position:relative}.mm-grid{display:grid;gap:14px;grid-template-columns:repeat(5,1fr);position:relative;padding-top:26px}.mm-grid:before{content:"";position:absolute;top:0;right:10%;left:10%;border-top:3px solid #b8c7d9}.mm-br{background:#fff;border:2px solid var(--c);border-radius:14px;padding:10px;position:relative}.mm-br:before{content:"";position:absolute;top:-26px;right:50%;height:24px;border-right:3px solid #b8c7d9}.mm-br h3{margin:0 0 6px;font:800 15px Cairo,sans-serif;color:var(--c);display:flex;justify-content:space-between;gap:6px}.mm-br h3 small{background:var(--c);color:#fff;border-radius:99px;padding:0 8px;font-size:11px;align-self:center}.mm-br.ok{background:#eaf6e8}.mm-br label{display:flex;gap:8px;align-items:flex-start;min-height:44px;padding:6px 4px;border-top:1px dashed #d9dfe6;font-size:13px;line-height:1.5;cursor:pointer}.mm-br input{width:20px;height:20px;margin-top:2px;flex:none;accent-color:var(--c)}.mm-br input:checked+span{text-decoration:line-through;color:#64748b}@media(max-width:1000px){.mm-grid{grid-template-columns:repeat(2,1fr)}.mm-grid:before,.mm-br:before{display:none}.mm-grid{padding-top:12px}}@media(max-width:640px){.mm-grid{grid-template-columns:1fr;padding-right:16px;border-right:3px solid #b8c7d9}.mm-br:before{display:block;top:22px;right:-19px;height:0;width:16px;border-right:0;border-top:3px solid #b8c7d9}.mm-root{font-size:14px}}
 @media(max-width:640px){#rm-road,#mm-map{padding:14px!important}.rm-steps{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.rm-steps button{flex:0 0 118px;min-height:52px;scroll-snap-align:start}.rm-sw button,.rm-pill{min-height:40px;display:inline-flex;align-items:center}.rm-ck label{min-height:44px;align-items:center}.rm-ck input{width:20px;height:20px}}
 </style>
+
+<div id="chapter-panel" class="no-print" dir="rtl">
+<h2>📚 فصول الدليل — اختر مرحلة</h2>
+<p>اختار المرحلة اللي عايز تذاكرها، أو اضغط «كل الفصول» لعرض الدليل كاملًا.</p>
+<div class="chapter-actions" id="chapter-actions">
+<button type="button" data-stage="all" aria-pressed="true">🗂️ كل الفصول</button>
+<button type="button" data-stage="start" aria-pressed="false">🧰 البداية</button>
+<button type="button" data-stage="data" aria-pressed="false">📥 البيانات</button>
+<button type="button" data-stage="relations" aria-pressed="false">🔗 العلاقات</button>
+<button type="button" data-stage="fields" aria-pressed="false">🏷️ الحقول</button>
+<button type="button" data-stage="charts" aria-pressed="false">📊 الرسوم</button>
+<button type="button" data-stage="dash" aria-pressed="false">🧩 Dashboard</button>
+<button type="button" data-stage="final" aria-pressed="false">✅ التطبيق والتسليم</button>
+</div><div class="chapter-help" id="chapter-count" role="status" aria-live="polite"></div>
+</div>
+<script id="chapter-filter-reliable">
+document.addEventListener('DOMContentLoaded',function(){
+ const root=document.getElementById('chapter-panel');if(!root)return;
+ const stages={
+ start:['sec-visual-locator','sec-flow','sec-ui'],
+ data:['extra-15','extra-16','complete-guide'],
+ relations:['extra-17','simple-learning'],
+ fields:['extra-18','extra-19','extra-20','sec-calc','sec-marks'],
+ charts:['sec-chart','chart-decision-guide','sec-treemap','sec-maps','extra-21'],
+ dash:['sec-dash','sec-filters','extra-22','extra-23','sec-format','sec-story'],
+ final:['extra-24','sec-publish','extra-25','universal-workflow','section-31','sec-lab','sec-quiz','sec-summary']
+ };
+ const ids=new Set(Object.values(stages).flat());
+ const targets=[...ids].map(id=>document.getElementById(id)).filter(Boolean);
+ function choose(stage){
+   const chosen=stage==='all'?null:new Set(stages[stage]||[]);
+   targets.forEach(el=>el.classList.toggle('chapter-hidden',!!chosen&&!chosen.has(el.id)));
+   root.querySelectorAll('button[data-stage]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.stage===stage)));
+   document.getElementById('chapter-count').textContent=stage==='all'?'كل الفصول ظاهرة':('الفصول المعروضة: '+targets.filter(e=>!e.classList.contains('chapter-hidden')).length);
+ }
+ root.addEventListener('click',e=>{const b=e.target.closest('button[data-stage]');if(!b)return;choose(b.dataset.stage)});
+ // A direct topic link should always reveal its section, even after filtering.
+ document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const id=decodeURIComponent(a.hash.slice(1));const target=document.getElementById(id);if(target&&target.classList.contains('chapter-hidden'))choose('all')},true);
+ document.addEventListener('change',e=>{const id=e.target?.value;if(typeof id==='string'&&document.getElementById(id)?.classList.contains('chapter-hidden'))choose('all')});
+ choose('all');
+});
+</script>
 <section class="study-card bg-white rounded-2xl p-6 shadow-sm space-y-4" id="mm-map">
 <h2 class="text-2xl font-extrabold rm-h">🗺️ Mindmap Checklist — امشِ عليها خطوة بخطوة</h2>
 <p class="hub-en-heading">Tick each step · progress is saved on this device</p>
@@ -475,24 +544,7 @@ const G=document.getElementById("mmG");B.forEach((b,i)=>{const d=document.create
 function up(){let n=0,nx="";G.querySelectorAll(".mm-br").forEach((d,i)=>{const c=[...d.querySelectorAll("input")],k=c.filter(x=>x.checked).length;n+=k;d.querySelector("small").textContent=k+"/"+c.length;d.classList.toggle("ok",k==c.length);if(!nx){const u=c.find(x=>!x.checked);if(u)nx="➡️ الخطوة التالية: <b>"+B[i][0]+"</b> — "+u.nextSibling.textContent}});const p=Math.round(n/20*100);document.getElementById("mmB").style.width=p+"%";document.getElementById("mmP").textContent=p+"%";document.getElementById("mmN").innerHTML=nx||"🎉 كل الخطوات خلصت — Dashboard جاهزة للتسليم!";document.querySelector('#mmB').parentNode.setAttribute("aria-valuenow",p)}
 G.addEventListener("change",e=>{st[e.target.dataset.k]=e.target.checked;try{localStorage.setItem(K,JSON.stringify(st))}catch(x){}up()});document.getElementById("mmR").onclick=()=>{st={};try{localStorage.removeItem(K)}catch(x){}G.querySelectorAll("input").forEach(x=>x.checked=false);up()};up()})();
 </script>
-<style>
-#ux-bar{direction:rtl;background:#fff;border:1px solid #d9dfe6;border-radius:16px;padding:12px}#ux-bar h2{font:800 20px Cairo,sans-serif;color:#1f3b5c;margin:0 0 4px}#ux-bar p{margin:0 0 10px;font-size:13px;color:#64748b}.ux-f{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x proximity}.ux-f button{flex:none;min-height:44px;scroll-snap-align:start;border:2px solid var(--c,#cbd5e1);background:#fff;color:#1f3b5c;border-radius:99px;padding:4px 14px;font:700 13px Cairo,sans-serif;cursor:pointer}.ux-f button.on{background:var(--c,#1f3b5c);color:#fff}.ux-a{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:8px;font-size:13px;color:#475569}.ux-a button{min-height:40px;border:1px solid #cfdbe8;background:#f6f8fb;border-radius:10px;padding:2px 12px;font:700 12px Cairo,sans-serif;cursor:pointer}
-.ux-sec .ux-body{display:none;margin-top:14px}.ux-sec.open .ux-body{display:block}.ux-sec .ux-body>*+*{margin-top:1rem}.ux-sec{padding:14px 18px!important;scroll-margin-top:84px}.ux-hd{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;cursor:pointer;min-height:44px}.ux-hd h2{flex:1 1 60%;margin:0!important;font-size:19px!important;line-height:1.5}.ux-hd .hub-en-heading{flex:1 1 100%;order:5;margin:0!important;font-size:11px}.ux-bd{color:#fff;border-radius:99px;padding:1px 10px;font:700 11px Cairo,sans-serif;white-space:nowrap}.ux-tl{flex:1 1 100%;order:4;color:#334155;font-size:14px;background:#f6f8fb;border-radius:10px;padding:6px 10px}.ux-ch{font-style:normal;color:#64748b;transition:transform .2s}.ux-sec.open .ux-ch{transform:rotate(180deg)}.ux-sec.open{box-shadow:0 8px 26px #1f3b5c1f}.ux-sec table{font-size:13px}.ux-sec th{white-space:nowrap}.ux-sec tr:nth-child(even) td{background:#f8fafc}.ux-sec p,.ux-sec li{max-width:75ch}.ux-hid{display:none!important}@media print{.ux-sec .ux-body{display:block!important}#ux-bar{display:none}}@media(max-width:640px){.ux-hd h2{font-size:17px!important}.ux-sec{padding:12px!important}}
-</style>
-<div id="ux-bar" class="no-print"><h2>📚 فصول الدليل — اختر مرحلة</h2><p>كل فصل مطوي: اقرأ الخلاصة في سطر، وافتحه لو محتاج التفاصيل.</p><div class="ux-f" id="uxF"></div><div class="ux-a"><button id="uxO" type="button">فتح الكل</button><button id="uxC" type="button">طي الكل</button><span id="uxN"></span></div></div>
-<script>
-document.addEventListener("DOMContentLoaded",function(){const $=i=>document.getElementById(i),P={st:["🧰 البداية","#0f172a"],da:["📥 Data","#475569"],re:["🔗 Relations","#7c5cbf"],fi:["🏷️ Fields","#c2457a"],ch:["📊 Charts","#f28e2b"],db:["🧩 Dashboard","#b6522b"],de:["✅ التسليم","#1f3b5c"]},
-M={"sec-visual-locator":["st","اعرف مكان كل أداة في Tableau بالاسم والمسار."],"sec-flow":["st","المسار كله: Data ← Sheet ← Dashboard ← Publish."],"sec-ui":["st","Data pane يسار، Shelves فوق، Canvas في النص."],"extra-15":["da","قبل أي رسم: اكتب السؤال والـKPI والجمهور."],"extra-16":["da","اتصل بالبيانات، وافحص الأنواع والـNulls أولاً."],"extra-17":["re","Relationship للربط، Join للدمج، Union للتكديس."],"extra-18":["fi","Dimension يقسّم، Measure يقيس."],"extra-19":["fi","معادلات جاهزة: Profit Ratio وAOV وCOUNTD."],"extra-20":["fi","FIXED يثبّت المستوى، Table Calc يحسب فوق المعروض."],"sec-calc":["fi","Calculated Field = معادلة تضيف حقل جديد."],"sec-marks":["fi","Marks: Color وSize وLabel وDetail وTooltip."],"sec-chart":["ch","اسحب Dimension وMeasure ← أول Chart."],"chart-decision-guide":["ch","السؤال يحدد الرسم — 20 مثال مرسوم."],"sec-treemap":["ch","Treemap للحصص، Bubbles للمقارنة بالحجم."],"sec-maps":["ch","Map يحتاج Geographic Role صحيح."],"extra-21":["ch","مقارنة=Bar · زمن=Line · علاقة=Scatter · حصة=Treemap."],"sec-dash":["db","اجمع الـSheets في Dashboard بحجم ثابت."],"sec-filters":["db","Filters تقيّد البيانات، Actions تربط الرسوم."],"extra-22":["db","Parameter يبدّل المقياس، Action يربط الرسوم."],"extra-23":["db","KPIs فوق، Trends في النص، Detail تحت."],"sec-format":["db","تنسيق بسيط: ألوان قليلة وعناوين واضحة."],"sec-story":["db","Story = شرائح تحكي نتيجة التحليل."],"extra-24":["de","قارن الأرقام بالمصدر قبل التسليم."],"sec-publish":["de","احفظ TWBX أو انشر على Tableau Public."],"extra-25":["de","وثّق الـKPIs ولا تنشر بيانات حساسة."],"universal-workflow":["de","12 خطوة تمشي عليها في أي مشروع."],"section-31":["de","مثال كامل: Sales Performance."],"sec-lab":["de","تطبيق عملي خطوة بخطوة."],"sec-quiz":["de","اختبر نفسك قبل الامتحان."],"sec-summary":["de","ملخص الامتحان في صفحة واحدة."]},X={"real-tableau-screenshots":"st","complete-guide":"da"},all=[];
-function tog(s,f){const o=f===undefined?!s.classList.contains("open"):f;s.classList.toggle("open",o);s.querySelector(".ux-hd").setAttribute("aria-expanded",o)}
-Object.keys(M).forEach(id=>{const s=$(id),h=s&&s.querySelector("h2");if(!h)return;const p=M[id][0],pc=P[p][1],hd=document.createElement("div"),n=h.nextElementSibling;hd.className="ux-hd";hd.tabIndex=0;hd.setAttribute("role","button");hd.setAttribute("aria-expanded","false");s.insertBefore(hd,h);hd.appendChild(h);if(n&&n.classList.contains("hub-en-heading"))hd.appendChild(n);hd.insertAdjacentHTML("beforeend",'<span class="ux-bd" style="background:'+pc+'">'+P[p][0]+'</span><div class="ux-tl">'+M[id][1]+'</div><i class="ux-ch">▾</i>');const b=document.createElement("div");b.className="ux-body";[...s.children].forEach(c=>{if(c!==hd)b.appendChild(c)});s.appendChild(b);s.classList.add("ux-sec");s.dataset.ph=p;h.style.borderColor=pc;hd.onclick=()=>tog(s);hd.onkeydown=e=>{if(e.key=="Enter"||e.key==" "){e.preventDefault();tog(s)}};all.push(s)});
-Object.keys(X).forEach(i=>{const s=$(i);if(s){s.dataset.ph=X[i];all.push(s)}});
-const F=$("uxF");function setF(k){[...F.children].forEach(b=>b.classList.toggle("on",b.dataset.k==k));let c=0;all.forEach(s=>{const h=k!="all"&&s.dataset.ph!=k;s.classList.toggle("ux-hid",h);if(!h&&s.classList.contains("ux-sec"))c++});$("uxN").textContent=c+" فصل"}
-[["all",["🗂️ الكل","#1f3b5c"]]].concat(Object.entries(P)).forEach(e=>{const b=document.createElement("button");b.type="button";b.dataset.k=e[0];b.textContent=e[1][0];b.style.setProperty("--c",e[1][1]);b.onclick=()=>setF(e[0]);F.appendChild(b)});setF("all");
-$("uxO").onclick=()=>all.forEach(s=>s.classList.contains("ux-sec")&&!s.classList.contains("ux-hid")&&tog(s,true));$("uxC").onclick=()=>all.forEach(s=>s.classList.contains("ux-sec")&&tog(s,false));
-function rv(id){const el=id&&$(id),s=el&&el.closest(".ux-sec");if(!s)return;if(s.classList.contains("ux-hid"))setF("all");tog(s,true);setTimeout(()=>el.scrollIntoView({block:"start"}),60)}
-document.addEventListener("click",e=>{const a=e.target.closest&&e.target.closest('a[href^="#"]');if(a)rv(a.getAttribute("href").slice(1))},true);document.addEventListener("change",e=>{const v=e.target&&e.target.value;if(typeof v=="string"&&v&&$(v.replace("#","")))rv(v.replace("#",""))});if(location.hash)rv(location.hash.slice(1));
-const l=document.querySelector('a[href="#sec-visual-locator"]'),r=l&&l.parentElement;if(r&&r.classList.contains("flex")){const d=document.createElement("details");d.className="no-print bg-white rounded-xl border border-slate-200 p-2";d.innerHTML='<summary class="font-bold text-sm cursor-pointer p-2">📑 الفهرس الكامل (كل الفصول)</summary>';r.parentNode.insertBefore(d,r);d.appendChild(r)}});
-</script>
+
 <section class="study-card bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-5" id="sec-visual-locator">
 <h2 class="text-2xl font-extrabold text-tableau-navy border-r-4 border-tableau-orange pr-3">دليل التعرف البصري على أدوات Tableau — Visual Tool Locator</h2><p class="hub-en-heading">Tableau tool finder: real interface screenshots</p>
 <p>كل أداة لها <b>اسم إنجليزي مطابق أو قريب من واجهة البرنامج</b>، وشرح عربي، ومكانها، وطريق الوصول إليها. الرموز في الجدول <b>علامات تذكيرية توضيحية وليست نسخًا حرفية لأيقونات Tableau</b>؛ الصور الموجودة تحت الجدول لقطات فعلية من الدليل. قد يختلف موضع بعض الأوامر حسب إصدار Tableau Desktop / Tableau Public.</p>
